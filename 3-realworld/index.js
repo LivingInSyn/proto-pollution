@@ -35,11 +35,9 @@ var indexItem = function(obj, i) {
 };
 remapObject = function(item, map) {
     var obj = {};
-
     _.each(map, function(value, key) {
         obj[key] = value.split(".").reduce(indexItem, item);
     });
-
     return obj;
 };
 
