@@ -1,6 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
+// boring stuff
+const PORT = 8080;
+const HOST = '0.0.0.0';
+const app = express();
+app.use(bodyParser.json());
 
 // the vulnerable functions
 const isObject = obj => obj && obj.constructor && obj.constructor === Object;
@@ -15,15 +20,8 @@ function merge(a, b) {
     return a
 }
 
-
-// Constants
-const PORT = 8080;
-const HOST = '0.0.0.0';
 const admin = {};
 let users = {}
-
-const app = express();
-app.use(bodyParser.json());
 
 let someConfigObject = {
     //superMode = false
